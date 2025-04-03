@@ -1,118 +1,77 @@
-<p align="center">
-  <a href="https://vuestic.dev" target="_blank">
-    <img alt="Vuestic UI Logo" width="220" src="./.github/assets/vuestic-admin-logo.png">
-  </a>
-</p>
+# Application de Gestion et de Vente de Chambres d'Hôtels
 
-<p align="center">
-  Free and beautiful Admin Template utilizing Vue 3, Vite, Pinia, and Tailwind CSS. Designed for building efficient, responsive, and fast-loading admin interfaces.</br>
-  Developed by  <a href="https://epicmax.co">Epicmax</a>.</br>
-  Based on <a href="https://ui.vuestic.dev">Vuestic UI</a> library.
-</p>
+## Description
+Cette application web permet aux hôtels de gérer leurs offres de chambres et aux agences de voyages de proposer un système de réservation en ligne via un widget personnalisable. Elle facilite la gestion des réservations, des tarifs et des commissions entre les différents acteurs du secteur.
 
-<p align="center">
-  <a href="https://admin-demo.vuestic.dev"> Live Demo </a> |
-  <a href="https://admin.vuestic.dev/"> About Vuestic Admin </a> |
-  <a href="https://ui.vuestic.dev/">Vuestic UI documentation</a>
-</p>
+## Fonctionnalités
 
-> Vuestic Admin is built with [Vuestic UI](https://ui.vuestic.dev). See our
-> <a href="https://github.com/epicmaxco/vuestic-ui/issues">issues</a>,
-> <a href="https://ui.vuestic.dev/en/contribution/guide">contributing guide</a> and join discussions on our
-> <a href="https://discord.gg/jTKTjj2weV">Discord server</a> to help us improve Vuestic Admin & Vuestic UI experience.
+### Pour les hôtels :
+- Gestion des informations de l’hôtel (nom, description, localisation, services)
+- Ajout, modification et suppression de chambres (type, description, photos, prix, disponibilité)
+- Configuration des prix dynamiques en fonction des saisons et promotions
+- Définition des règles de réservation (durée minimum/maximum, dates spécifiques, annulation)
+- Visualisation des réservations effectuées et des paiements à recevoir
 
-<p align="center">
-  <a href="https://admin.vuestic.dev" target="_blank">
-    <img src="./public/vuestic-admin-image.png" align="center" width="888px"/>
-  </a>
-</p>
+### Pour les agences de voyages :
+- Intégration d'un widget de réservation personnalisable sur leur site web
+- Accès à un tableau de bord affichant les réservations et la commission à percevoir
+- Gestion des hôtels partenaires et activation/désactivation de certains établissements
+- Configuration des commissions sous forme de pourcentage ou montant fixe
 
-### Quick start
+### Pour les clients :
+- Consultation des chambres disponibles et réservation en ligne
+- Accès à des filtres avancés (région, nombre d’étoiles, prix, disponibilité)
+- Paiement en ligne sécurisé
 
-Use following command to quickly scaffold new [Vuestic Admin](https://admin-demo.vuestic.dev) or empty Vite or Nuxt project with [Vuestic UI](https://ui.vuestic.dev).
+## Technologies Utilisées
+- **Backend** : NestJS, Node.js
+- **Frontend** : Vue.js
+- **Base de données** : PostgreSQL
+- **API** : RESTful
+- **Outils** : Git, Docker (optionnel)
 
+## Installation et Lancement
+
+### Prérequis
+- Node.js installé sur votre machine
+- PostgreSQL configuré
+- Git pour la gestion du code source
+
+### Installation
 ```bash
-npm create vuestic@latest
+# Cloner le dépôt
+git clone https://github.com/votre-repo/application-hotel.git
+cd application-hotel
+
+# Installer les dépendances backend
+cd backend
+npm install
+
+# Installer les dépendances frontend
+cd ../frontend
+npm install
 ```
 
-After [Vuestic Admin](https://admin.vuestic.dev) is installed, run `npm install` to install dependcies, then run `npm run dev` to start local development server.
+### Configuration de la base de données
+Configurer les informations de connexion dans le fichier `.env` du backend :
+```env
+DATABASE_URL=postgresql://user:password@localhost:5432/hotel_db
+```
 
-### Documentation
+### Lancement de l’application
+```bash
+# Lancer le backend
+cd backend
+npm run start
 
-Documentation, guides, examples and tutorials are available on [ui.vuestic.dev](https://ui.vuestic.dev)
+# Lancer le frontend
+cd ../frontend
+npm run dev
+```
 
-### Official Discord Server
+## Contribution
+Les contributions sont les bienvenues ! Pour toute suggestion ou correction, veuillez ouvrir une *issue* ou soumettre une *pull request*.
 
-Ask questions at the official community [discord server](https://discord.gg/jTKTjj2weV)
+## License
+Ce projet est sous licence MIT.
 
-### Features
-
-- **Vue 3, Vite, Pinia, and Tailwind CSS -** Fast and efficient development
-- **Dark Theme -** Modern and eye-catching
-- **Global Configuration -** Effortless customization
-- **Accessibility -** Inclusive and user-friendly
-- **i18n Integration -** Easy localization for global reach
-- **Educational Resource -** Ideal for learning and improving skills
-- **Responsive Design -** Adapts seamlessly to all devices
-- **Professional Support -** Reliable help from the experts
-- **Highly Customizable -** Tailor to your project’s style
-
-### Contributing
-
-Thanks for all your wonderful PRs, issues and ideas.
-
-<a href="https://github.com/epicmaxco/vuestic-admin/graphs/contributors">
-<img src="https://opencollective.com/vuestic-admin/contributors.svg?width=890&button=false" />
-</a>
-<br>
-
-You’re always welcome to join: check out
-our <a href="https://ui.vuestic.dev/en/contribution/guide">
-contribution guides</a>
-, [open issues](https://github.com/epicmaxco/vuestic-ui/issues)
-and [Discord server](https://discord.gg/jTKTjj2weV)
-
-### Partners & Sponsors ❤️
-
-<img src="./.github/assets/sponsors.png" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="400px">
-
-Become a partner: [hello@epicmax.co](mailto:hello@epicmax.co)
-
-### Can I hire you guys?
-
-[Epicmax](https://epicmax.co) is committed to Open Source from its beginning. Vuestic Admin was created and backed by Epicmax, and is supported through all the years.
-
-With 6+ years of dedicated work on both commercial and open-source projects, and more than 47 clients worldwide across various fields, Epicmax has deep expertise in frontend development, especially in Vue.js. We regularly conduct code audits for our projects and now excited to offer this service not only to our existing clients but to anyone looking to understand the state of their frontend code and ensure it's secure and up-to-date!
-
-You can request a consultation or order web development services by Epicmax via this [form](https://epicmax.co/contacts) 😎
-
-Say hi: <a href="mailto:hello@epicmax.co">hello@epicmax.co</a>. We will be happy to work with you!
-
-[Other work](https://epicmax.co) we’ve done 🤘
-
-[Meet the Team](https://ui.vuestic.dev/introduction/team)
-
-### Awards
-
-<a href="https://flatlogic.com/templates/vuestic-vue-free-admin" target="_blank">
-    <img src="https://i.imgur.com/ZeQPZ3Q.png" align="center" width="150px"/>
-</a>
-<p>
-  By <a href="https://flatlogic.com/templates/vuestic-vue-free-admin" target="_blank">@flatlogic</a> marketplace
-</p>
-
-### Premium Support and Consulting
-
-Get Premium Support & Consulting services through our official development partner, Epicmax. As the main contributor to Vuestic UI and Vuestic Admin, Epicmax brings a wealth of expertise and experience to help you achieve your project goals efficiently and effectively.
-
-[Get a quote](https://www.epicmax.co/?ref=vuestic-consulting)
-
-### Follow us
-
-Stay up to date with the latest Vuestic news! Follow us
-on [Twitter](https://twitter.com/vuestic_ui)
-or [Linkedin](https://www.linkedin.com/company/18509340)
-
-### License
-
-[MIT](https://github.com/epicmaxco/vuestic-admin/blob/master/LICENSE) license.
